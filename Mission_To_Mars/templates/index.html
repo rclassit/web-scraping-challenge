@@ -20,7 +20,7 @@
       <h1 class="font-weight-bold">Mission to Mars</h1>
       <p><a class="btn btn-primary btn-lg" href="../scrape" role="button">Scrape New Data</a></p>
     </div>
-
+<!---Return Mars News-->
     <div class="row">
       <div class="col-md-12">
         <h2><u>Latest Mars News</u></h2>
@@ -34,12 +34,14 @@
       </div>
     </div>
   <hr>
+  <!--Return Featured Mars Image-->
     <div class="row">
       <div class="col-md-8 border">
         <h2 class=""><u>Featured Mars Image</u></h2> 
         </br>
         <img src="{{mars.featured_image_url}}" alt="Features Mars Image">
       </div>
+      <!---Pull Fact Table-->
       <div class="col-md-4">
         </br>
         <div class="border">
@@ -49,6 +51,7 @@
       </div>
     </div>
   <hr>
+  <!--Mars Hemisphere For Loop-->
     <div class="row">
       <div class="col-md-8 offset-4">
         <h2 class="align-items-center"><u>Mars Hemispheres</u></h2>  
@@ -63,7 +66,7 @@
                 <div>
                   <img width="512 px" height="512 px" src="{{ hemisphere.image_url | safe }}">
                 </div>
-
+<!---Pull Title-->
                 <div>
                   <h4> {{ hemisphere.title | safe }} </h4>  
                 </div>
