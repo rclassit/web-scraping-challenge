@@ -24,7 +24,6 @@ def scrape():
 
     #Mars image scrape
 
-
     browser.visit('https://data-class-jpl-space.s3.amazonaws.com/JPL_Space/index.html')
     browser.links.find_by_partial_text('FULL IMAGE').click()
     image = browser.find_by_css('img.fancybox-image')['src']
@@ -35,6 +34,7 @@ def scrape():
     tables = pd.read_html(Mars_facts_url)
     mars_df = tables[2]
     mars_df.columns = ['Description','Value']
+    mars_df.set_index('Description', inplace=True)
     mars_html = mars_df.to_html()
     mars_html.replace('\n','')
 
